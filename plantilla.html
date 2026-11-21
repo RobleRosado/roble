@@ -134,12 +134,13 @@ html[data-theme=dark] .tag{color:#9fd3dc}
 .row .d{color:var(--acc);font-weight:600;white-space:nowrap;font-size:15px}
 .row small{display:block;color:var(--soft);font-size:15px}
 .cv h3{font-family:Spectral,serif;font-size:24px;margin:0 0 8px}
-.photos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:260px;gap:8px}
+.photos{display:grid;grid-auto-flow:dense;grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:260px;gap:8px}
 .photos figure{margin:0;position:relative;overflow:hidden;border-radius:4px;background:var(--panel)}
 .photos figure.w{grid-column:span 2}
 .ph-open{all:unset;display:block;width:100%;height:100%;cursor:zoom-in}
 .ph-open:focus-visible{outline:3px solid var(--acc);outline-offset:-3px}
 .photos img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;transition:transform .6s ease}
+.photos img[src$="leicester-calle.jpg"]{object-position:50% 70%}
 .photos figure:hover img{transform:scale(1.04)}
 .photos figcaption{position:absolute;inset:auto 0 0 0;padding:22px 10px 8px;background:linear-gradient(transparent,#000000b0);color:#fff;font-size:13px;line-height:1.35;pointer-events:none}
 #lb{position:fixed;inset:0;z-index:20;background:#000000e6;display:none;align-items:center;justify-content:center;padding:56px 16px 72px}

@@ -127,7 +127,11 @@ PHOTOS = [
  ("leicester-juana", "", {"es": "Los cuentos de Juana en Leicester, 2023", "en": "Los cuentos de Juana in Leicester, 2023"}),
  ("sabanalarga", "", {"es": "Marvel Moreno, sede Sabanalarga, Universidad del Atlántico", "en": "On Marvel Moreno, Universidad del Atlántico, Sabanalarga"}),
  ("uniandes", "", {"es": "Grabación en la biblioteca, Universidad de los Andes", "en": "Recording at the library, Universidad de los Andes"}),
- ("catedra2017", "", {"es": "VI Cátedra Gabriel García Márquez, Museo del Caribe, 2017", "en": "6th Gabriel García Márquez Chair, Museo del Caribe, 2017"}),
+ ("tours-titulo", "", {"es": "«La celebración en el borde existencial», Congreso de Colombianistas, Tours, 2023", "en": "Paper at the Association of Colombianists, Tours, 2023"}),
+ ("leicester-calle", "", {"es": "Leicester, Reino Unido, 2023", "en": "Leicester, United Kingdom, 2023"}),
+ ("lente-caribe", "w", {"es": "Mención de honor, concurso de fotografía «Ruta de tradición por el Carnaval del Atlántico», Lente Caribe, 2017", "en": "Honourable mention, «Ruta de tradición por el Carnaval del Atlántico» photography contest, Lente Caribe, 2017"}),
+ ("catedra-ggm", "", {"es": "Concurso de fotografía, VI Cátedra Gabriel García Márquez, 2017", "en": "Photography contest, 6th Gabriel García Márquez Chair, 2017"}),
+ ("catedra2017", "w", {"es": "VI Cátedra Gabriel García Márquez, Museo del Caribe, 2017", "en": "6th Gabriel García Márquez Chair, Museo del Caribe, 2017"}),
 ]
 
 # ---------------------------------------------------------------- galería (salas, del repositorio galeria-acs)
