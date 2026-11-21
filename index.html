@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es" data-lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Álvaro García Benavides</title>
+<meta name="description" content="Álvaro Ramón García Benavides — literatura del Caribe colombiano y del siglo XIX. Doctorando en Literatura, Universidad de los Andes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* VOICE academic, sober, a scholar's own page read by admissions committees
+   IDEA a river chart of the Magdalena: the work flows in dated stations
+   PICTURE large full-bleed photograph of him lecturing on Los cuentos de Juana (Leicester, 2023)
+   COLOUR white ground, ink, deep river-mouth teal fields, coral accent for links and dates
+   TYPE Spectral (display, book-like) + Source Sans 3 (text)
+   LAYOUT hero band photo with name in teal field; sections in two columns on laptop, one on phone */
+:root{color-scheme:light dark;--bg:light-dark(#ffffff,#0e1517);--ink:light-dark(#17191a,#e9eeee);--soft:light-dark(#5a6366,#a9b4b6);--sea:light-dark(#0b4a57,#0f3a44);--seaInk:#f2f7f7;--acc:light-dark(#c8432b,#ff8a70);--rule:light-dark(#dde3e3,#26343a);--panel:light-dark(#f2f6f6,#141f22)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-padding-top:72px;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 "Source Sans 3",system-ui,sans-serif;overflow-x:clip}
+img{max-width:100%;display:block}
+a{color:var(--acc);text-underline-offset:3px}
+h1,h2,h3{font-family:Spectral,Georgia,serif;font-weight:600;line-height:1.08;letter-spacing:-.01em;margin:0}
+h2{font-size:clamp(28px,3.6vw,40px);margin-bottom:22px}
+h3{font-size:19px;line-height:1.3;font-weight:600}
+.band{padding-block:clamp(36px,5vw,72px);padding-inline:max(5vw,16px)}
+.wrap{max-width:1180px;margin-inline:auto}
+html[data-lang=es] .en,html[data-lang=en] .es{display:none}
+nav{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--rule)}
+nav .wrap{display:flex;align-items:center;gap:18px;flex-wrap:wrap;padding:10px max(5vw,16px)}
+nav .me{font-family:Spectral,serif;font-weight:600;font-size:18px;color:var(--ink);text-decoration:none;margin-right:auto}
+nav .links{display:flex;gap:16px;flex-wrap:wrap}
+nav .links a{color:var(--ink);text-decoration:none;font-size:15px}
+nav .links a:hover{color:var(--acc)}
+.lang{display:flex;border:1px solid var(--rule);border-radius:999px;overflow:hidden}
+.lang button{font:600 14px "Source Sans 3",sans-serif;border:0;background:none;color:var(--ink);padding:8px 14px;min-height:40px;cursor:pointer}
+.lang button[aria-pressed=true]{background:var(--sea);color:var(--seaInk)}
+.lang button:focus-visible{outline:2px solid var(--acc);outline-offset:-2px}
+.hero{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);background:var(--sea);color:var(--seaInk)}
+.hero .txt{padding:clamp(32px,5vw,72px) max(5vw,16px);display:flex;flex-direction:column;justify-content:flex-end;gap:18px}
+.hero h1{font-size:clamp(40px,5.4vw,66px);line-height:1.02;letter-spacing:-.02em}
+.hero p{margin:0;max-width:34em;font-size:18px;color:#d6e6e8}
+.hero .ids{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.hero .ids a{color:var(--seaInk);border:1px solid #ffffff55;border-radius:999px;padding:8px 16px;text-decoration:none;font-weight:600;font-size:15px;min-height:40px}
+.hero .ids a:hover{background:#ffffff1a}
+.hero figure{margin:0;position:relative;min-height:440px}
+.hero figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 40%}
+.hero figcaption{position:absolute;left:16px;bottom:14px;background:#0b2a31cc;color:#fff;font-size:13px;padding:5px 10px;border-radius:4px}
+.lines{display:grid;grid-template-columns:repeat(auto-fit,minmax(15em,1fr));gap:2px;background:var(--rule);border-block:1px solid var(--rule)}
+.lines div{background:var(--bg);padding:20px max(2vw,16px)}
+.lines b{display:block;font-family:Spectral,serif;font-size:19px;margin-bottom:4px}
+.lines span{color:var(--soft);font-size:15px}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:clamp(24px,4vw,64px);align-items:start}
+.note{border-left:3px solid var(--acc);padding:4px 0 4px 16px;color:var(--soft);font-size:15px;margin:0}
+.pub{padding:18px 0;border-top:1px solid var(--rule);display:grid;grid-template-columns:4.5em minmax(0,1fr);gap:16px}
+.pub:last-child{border-bottom:1px solid var(--rule)}
+.yr{font-family:Spectral,serif;font-size:22px;color:var(--acc);white-space:nowrap;line-height:1.2}
+.pub h3 em{font-style:italic}
+.meta{color:var(--soft);font-size:15px;margin-top:4px}
+.meta a{white-space:nowrap}
+.river{position:relative;padding-left:28px}
+.river::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:3px;background:linear-gradient(var(--sea),color-mix(in srgb,var(--sea) 40%,var(--bg)));border-radius:2px}
+.talk{position:relative;padding:0 0 18px}
+.talk::before{content:"";position:absolute;left:-27px;top:7px;width:13px;height:13px;border-radius:50%;background:var(--bg);border:3px solid var(--sea)}
+.talk.new::before{background:var(--acc);border-color:var(--acc)}
+.talk .y{font-weight:600;color:var(--acc);font-size:14px}
+.talk h3{font-size:17px;font-family:"Source Sans 3",sans-serif;font-weight:600}
+.talk .meta{margin-top:2px}
+.yearhead{font-family:Spectral,serif;font-size:24px;margin:12px 0 10px -28px;padding-left:28px}
+.proj{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);background:var(--panel);border:1px solid var(--rule);border-radius:6px;overflow:hidden;margin-bottom:22px}
+.proj .ph{position:relative;min-height:320px}
+.proj .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.proj .bd{padding:clamp(20px,3vw,36px);display:flex;flex-direction:column;gap:12px}
+.proj h3{font-size:26px;font-family:Spectral,serif}
+.btn{display:inline-flex;align-items:center;min-height:44px;padding:10px 18px;border-radius:999px;background:var(--acc);color:#fff;text-decoration:none;font-weight:600;align-self:flex-start}
+.btn:hover{filter:brightness(1.08)}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.card{border-top:3px solid var(--sea);padding-top:12px}
+.card p{margin:6px 0 0;color:var(--soft);font-size:15px}
+.cv{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(24px,4vw,56px)}
+.row{display:grid;grid-template-columns:6.5em minmax(0,1fr);gap:14px;padding:12px 0;border-top:1px solid var(--rule);font-size:16px}
+.row .d{color:var(--acc);font-weight:600;white-space:nowrap;font-size:15px}
+.row small{display:block;color:var(--soft);font-size:15px}
+.cv h3{font-family:Spectral,serif;font-size:24px;margin:0 0 8px}
+.photos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:260px;gap:8px}
+.photos figure{margin:0;position:relative;overflow:hidden;border-radius:4px;background:var(--panel)}
+.photos figure.w{grid-column:span 2}
+.photos img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;transition:transform .5s}
+.photos figure:hover img{transform:scale(1.03)}
+.photos figcaption{position:absolute;inset:auto 0 0 0;padding:22px 10px 8px;background:linear-gradient(transparent,#000000b0);color:#fff;font-size:13px;line-height:1.35}
+footer{background:var(--sea);color:var(--seaInk)}
+footer .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px}
+footer h2{color:var(--seaInk)}
+footer a{color:#ffd3c8}
+footer p{margin:0 0 8px}
+.fine{font-size:14px;color:#bcd2d5;margin-top:26px}
+@media(max-width:900px){.hero{grid-template-columns:minmax(0,1fr)}.hero figure{min-height:340px;order:-1}.two,.cv,.proj,footer .wrap{grid-template-columns:minmax(0,1fr)}.grid3{grid-template-columns:minmax(0,1fr)}.photos{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:200px}}
+@media(max-width:600px){nav .links{display:none}.hero h1{font-size:40px}.pub{grid-template-columns:minmax(0,1fr);gap:4px}.row{grid-template-columns:minmax(0,1fr);gap:2px}.photos figure.w{grid-column:span 2}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.photos img{transition:none}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="me" href="#inicio">Álvaro García Benavides</a>
+  <div class="links">
+    <a href="#investigacion"><span class="es">Investigación</span><span class="en">Research</span></a>
+    <a href="#publicaciones"><span class="es">Publicaciones</span><span class="en">Publications</span></a>
+    <a href="#ponencias"><span class="es">Ponencias</span><span class="en">Talks</span></a>
+    <a href="#proyectos"><span class="es">Proyectos</span><span class="en">Projects</span></a>
+    <a href="#cv">CV</a>
+    <a href="#contacto"><span class="es">Contacto</span><span class="en">Contact</span></a>
+  </div>
+  <div class="lang" role="group" aria-label="Idioma / Language">
+    <button id="l-es" aria-pressed="true">ES</button><button id="l-en" aria-pressed="false">EN</button>
+  </div>
+</div></nav>
+
+<header class="hero" id="inicio">
+  <div class="txt">
+    <h1>Álvaro Ramón García Benavides</h1>
+    <p class="es">Doctorando en Literatura, Universidad de los Andes. Investigador del grupo GILKARÍ, Universidad del Atlántico (Barranquilla).</p>
+    <p class="en">PhD candidate in Literature, Universidad de los Andes (Bogotá). Researcher, GILKARÍ research group, Universidad del Atlántico (Barranquilla, Colombia).</p>
+    <div class="ids">
+      <a href="https://orcid.org/0000-0002-0886-4992">ORCID</a>
+      <a href="https://scholar.google.com/citations?user=RLEHADkAAAAJ">Google Scholar</a>
+      <a href="https://academia.uniandes.edu.co/AcademyCv/a.garcia26">Uniandes</a>
+      <a href="https://galeria-acs.pages.dev/"><span class="es">Galería Cepeda Samudio</span><span class="en">Cepeda Samudio Gallery</span></a>
+      <a href="#cv"><span class="es">Ver CV</span><span class="en">See CV</span></a>
+    </div>
+  </div>
+  <figure>
+    <img src="img/hero.jpg" alt="Álvaro García Benavides presentando sobre Los cuentos de Juana de Álvaro Cepeda Samudio">
+    <figcaption><span class="es">Society for Caribbean Studies, Leicester, 2023</span><span class="en">Society for Caribbean Studies, Leicester, 2023</span></figcaption>
+  </figure>
+</header>
+
+<div class="lines">
+  <div><b><span class="es">Siglo XIX colombiano</span><span class="en">19th-century Colombia</span></b><span>Manuel María Madiedo, <i>La maldición</i> (1859)</span></div>
+  <div><b><span class="es">Río Magdalena y territorio</span><span class="en">Magdalena River and territory</span></b><span class="es">fronteras culturales, territorialización</span><span class="en">cultural borders, territorialization</span></div>
+  <div><b><span class="es">Caribe literario</span><span class="en">Caribbean literature</span></b><span>Cepeda Samudio, Marvel Moreno, J. F. Fuenmayor</span></div>
+  <div><b><span class="es">Mediación y creación</span><span class="en">Mediation and creation</span></b><span class="es">humanidades digitales, galerías, talleres</span><span class="en">digital humanities, galleries, workshops</span></div>
+</div>
+
+<section class="band" id="investigacion"><div class="wrap two">
+  <h2><span class="es">Investigación</span><span class="en">Research</span></h2>
+  <div>
+    <p class="note"><span class="es">Aquí va el párrafo de investigación escrito por Álvaro (tesis doctoral sobre la poética de la ingobernabilidad en la literatura del Caribe colombiano del siglo XIX).</span><span class="en">Álvaro's own research statement goes here (doctoral thesis on the poetics of ungovernability in 19th-century Colombian Caribbean literature).</span></p>
+  </div>
+</div></section>
+
+<section class="band" id="publicaciones" style="background:var(--panel)"><div class="wrap two">
+  <h2><span class="es">Publicaciones</span><span class="en">Publications</span></h2>
+  <div id="pubs"></div>
+</div></section>
+
+<section class="band" id="ponencias"><div class="wrap two">
+  <div>
+    <h2><span class="es">Ponencias y conferencias</span><span class="en">Conference papers and lectures</span></h2>
+    <p class="meta"><span class="es">Colombia, Brasil, Francia, Reino Unido y Estados Unidos (virtual), 2022–2026.</span><span class="en">Colombia, Brazil, France, the United Kingdom and the United States (online), 2022–2026.</span></p>
+  </div>
+  <div class="river" id="talks"></div>
+</div></section>
+
+<section class="band" id="proyectos" style="background:var(--panel)"><div class="wrap">
+  <h2><span class="es">Proyectos</span><span class="en">Projects</span></h2>
+  <article class="proj">
+    <div class="ph"><img src="img/filbac.jpg" alt="Presentación de la Galería Álvaro Cepeda Samudio en la III FILBAC"></div>
+    <div class="bd">
+      <h3><span class="es">Galería Álvaro Cepeda Samudio: literatura, imagen y memoria</span><span class="en">Álvaro Cepeda Samudio Gallery: literature, image and memory</span></h3>
+      <p class="es" style="margin:0">Galería digital en entorno 3D con obras de estudiantes y lectores que trasladan los procedimientos narrativos de Cepeda Samudio a otros lenguajes. Organizan Caribanías, GILKARÍ, el Semillero Maskeletras y la Licenciatura de la Universidad del Atlántico. Presentada en la III Feria Internacional del Libro del Atlántico (FILBAC), 12 de noviembre de 2026.</p>
+      <p class="en" style="margin:0">A digital 3D gallery of works by students and readers who carry Cepeda Samudio's narrative procedures into other media. Organized by Caribanías, GILKARÍ, the Maskeletras research seedbed and the Universidad del Atlántico teacher-education programme. Launched at the 3rd Atlántico International Book Fair (FILBAC), 12 November 2026.</p>
+      <a class="btn" href="https://galeria-acs.pages.dev/"><span class="es">Visitar la galería</span><span class="en">Visit the gallery</span></a>
+    </div>
+  </article>
+  <div class="grid3">
+    <div class="card"><h3>Caribanías: Biblioteca del pensamiento caribeño</h3><p class="es">Coinvestigador. Proyecto de investigación del grupo GILKARÍ, Universidad del Atlántico.</p><p class="en">Co-investigator. Research project of the GILKARÍ group, Universidad del Atlántico.</p></div>
+    <div class="card"><h3><span class="es">Semillero Maskeletras</span><span class="en">Maskeletras research seedbed</span></h3><p class="es">Coordinación del semillero de investigación, Universidad del Atlántico (Barranquilla y Sabanalarga).</p><p class="en">Coordinator of the undergraduate research seedbed, Universidad del Atlántico (Barranquilla and Sabanalarga).</p></div>
+    <div class="card"><h3>Historias Estelares / Cátedra Maranhão</h3><p class="es">Ciclo de conferencias entre la Universidad del Atlántico y la Universidade Federal do Maranhão. Organizador y conferencista.</p><p class="en">Lecture series between Universidad del Atlántico and Universidade Federal do Maranhão (Brazil). Organizer and speaker.</p></div>
+  </div>
+</div></section>
+
+<section class="band" id="cv"><div class="wrap">
+  <h2>Curriculum vitae</h2>
+  <div class="cv">
+    <div>
+      <h3><span class="es">Formación</span><span class="en">Education</span></h3>
+      <div id="edu"></div>
+      <h3 style="margin-top:28px"><span class="es">Idiomas</span><span class="en">Languages</span></h3>
+      <div class="row"><span class="d">C1</span><span><span class="es">Inglés — TOEFL (2021), APTIS (2026)</span><span class="en">English — TOEFL (2021), APTIS (2026)</span></span></div>
+      <div class="row"><span class="d">L1</span><span><span class="es">Español</span><span class="en">Spanish</span></span></div>
+    </div>
+    <div>
+      <h3><span class="es">Experiencia académica</span><span class="en">Academic experience</span></h3>
+      <div id="exp"></div>
+      <h3 style="margin-top:28px"><span class="es">Premios y becas</span><span class="en">Awards and grants</span></h3>
+      <div id="awd"></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="band" style="background:var(--panel)"><div class="wrap">
+  <h2><span class="es">En sala</span><span class="en">In the room</span></h2>
+  <div class="photos" id="photos"></div>
+</div></section>
+
+<footer class="band" id="contacto"><div class="wrap">
+  <div>
+    <h2><span class="es">Contacto</span><span class="en">Contact</span></h2>
+    <p><a href="mailto:a.garcia26@uniandes.edu.co">a.garcia26@uniandes.edu.co</a></p>
+    <p><a href="mailto:argarciabenavides@gmail.com">argarciabenavides@gmail.com</a></p>
+    <p>Barranquilla, Colombia</p>
+  </div>
+  <div>
+    <h2><span class="es">Perfiles</span><span class="en">Profiles</span></h2>
+    <p>ORCID: <a href="https://orcid.org/0000-0002-0886-4992">0000-0002-0886-4992</a></p>
+    <p><a href="https://scholar.google.com/citations?user=RLEHADkAAAAJ">Google Scholar</a></p>
+    <p><a href="https://academia.uniandes.edu.co/AcademyCv/a.garcia26"><span class="es">Perfil académico, Universidad de los Andes</span><span class="en">Academic profile, Universidad de los Andes</span></a></p>
+    <p><a href="https://www.linkedin.com/in/alvaro-ram%C3%B3n-garc%C3%ADa-benavides-8a380b200/">LinkedIn</a></p>
+    <p><span class="es">Escritura creativa:</span><span class="en">Fiction:</span> <a href="https://civilizacion-y-otros-cuentos.netlify.app">Civilización y otros cuentos</a></p>
+    <p class="fine">© 2026 Álvaro Ramón García Benavides</p>
+  </div>
+</div></footer>
+
+<script>
+{
+const pubs=[
+ {y:2026,t:"O esvaziamento da raça e o Caribe epistêmico em <em>Úrsula</em> e <em>La maldición</em> (1859)",m:"<em>Revista Iluminus</em> 3 (1): 1–8. ISSN 2966-1196",u:"https://doi.org/10.18764/2966-1196v3n1e29852",l:"DOI"},
+ {y:2025,t:"La celebración en el borde existencial: literatura caribeña en <em>Los cuentos de Juana</em> (1972) de Álvaro Cepeda Samudio",m:"<em>Revista de Estudios Colombianos</em> 65 (enero–junio): 72–79. ISSN 2474-6819",u:"https://colombianistas.org/ojs/index.php/rec/article/download/363/291/2006",l:"PDF"},
+ {y:2024,t:"The Universal Symbolism of River Narratives in Modern Literature",m:"<em>International Journal of Social Science and Humanity</em> 14 (1): 41–44. ISSN 2010-3646",u:"https://doi.org/10.18178/ijssh.2024.14.1.1191",l:"DOI"},
+ {y:2022,t:"Civilización y otros cuentos",m:{es:"Cuentos. <em>Lua revista</em> 7–8. ISSN 2665-3974",en:"Short fiction. <em>Lua revista</em> 7–8. ISSN 2665-3974"},u:"https://civilizacion-y-otros-cuentos.netlify.app",l:"web"},
+ {y:2020,t:"El mito de Sísifo",m:{es:"Cuento. <em>Lua revista</em> 3–4. ISSN 2665-3974",en:"Short story. <em>Lua revista</em> 3–4. ISSN 2665-3974"}},
+ {y:"",t:"El tren de la muerte que cruza por la vida",m:{es:"Cuento. Antología de la Red Nacional de Talleres de Escritura Creativa, Ministerio de Cultura. ISBN 978-958-56029-1-5",en:"Short story. Anthology of the National Network of Creative Writing Workshops, Colombian Ministry of Culture. ISBN 978-958-56029-1-5"}}
+];
+const talks=[
+ [2026,"Cepeda Samudio: entre la palabra y la imagen",{es:"Conferencia y lanzamiento de la Galería Álvaro Cepeda Samudio. III FILBAC, Teatro de Bellas Artes, Barranquilla",en:"Lecture and gallery launch. 3rd FILBAC book fair, Bellas Artes Theatre, Barranquilla"},1],
+ [2026,"La poesía afrodiaspórica: ancestralidad y Caribe",{es:"Charla a dos voces con Edna Rueda Abrahams. Banco de la República, La Cueva, Barranquilla",en:"Conversation with the writer Edna Rueda Abrahams. Banco de la República, La Cueva, Barranquilla"},1,"https://www.banrepcultural.org/barranquilla/actividad/la-poesia-afrodiasporica-ancestralidad-y-caribe"],
+ [2026,"Tierra fértil de sangre. Plantación, violencia e identidad en la narrativa del Gran Caribe",{es:"Cátedra Maranhão: Diálogos Latinoamericanos, UFMA – Universidad del Atlántico (virtual)",en:"Cátedra Maranhão: Latin American Dialogues, UFMA – Universidad del Atlántico (online)"},1],
+ [2026,{es:"Mesa redonda",en:"Round table"},{es:"II Congresso Internacional de Literatura Especulativa (CONIFE), UFMA, São Luís",en:"2nd International Congress of Speculative Literature (CONIFE), UFMA, São Luís, Brazil"},1],
+ [2025,"O Caribe literário colombiano: gênero e mestiçagem na obra de Marvel Moreno","II Congresso Internacional de Linguagem, Literatura e Discurso (CILLID), UFMA, São Luís"],
+ [2025,"La cima que contiene las más contradictorias sustancias: la novela del Caribe decimonónico en <i>La maldición</i> (1859) de Manuel María Madiedo",{es:"CRISOL III, Jornada de jóvenes investigadores en literatura, Universidad Nacional de Colombia",en:"CRISOL III early-career researchers' day, Universidad Nacional de Colombia"},0,"https://www.humanas.unal.edu.co/2026/unidades-academicas/departamentos/literatura/eventos/crisol/crisol-iii"],
+ [2025,"Proyectos de nación en el siglo XIX: Capmany y Manuel María Madiedo",{es:"Ciclo Historias Estelares, Universidad del Atlántico y UFMA, 30 de octubre. Organizador y conferencista",en:"Historias Estelares series, Universidad del Atlántico and UFMA, 30 October. Organizer and speaker"},0,"https://www.youtube.com/watch?v=pJVAoUS6vMc"],
+ [2025,"Crafting Caribbean Knowledge: A Reading of José Félix Fuenmayor's <i>Con el doctor afuera</i> (1967)","Society for Caribbean Studies, Postgraduate Conference"],
+ [2024,"Territorios caribes, una lectura de <i>Con el doctor afuera</i> (1967)",{es:"VII Congreso Internacional Literaturas del Siglo XXI, Universidad del Norte, Barranquilla",en:"7th International Congress on 21st-Century Literatures, Universidad del Norte, Barranquilla"},0,"https://www.uninorte.edu.co/web/maestria-en-literatura-y-escrituras-creativas/congreso-literatura-2024"],
+ [2024,"Cultural Mapping in Roberto Burgos Cantor's <i>Lo Amador</i>","Society for Caribbean Studies, Main Conference"],
+ [2024,"La territorialización en el siglo XIX colombiano: el caso del río Magdalena",{es:"VII Encuentro de Egresados, Universidad del Atlántico",en:"7th Alumni Meeting, Universidad del Atlántico"}],
+ [2024,"En diálogo con la forma de la novela: el territorio en <i>La vorágine</i>",{es:"Conferencia, Universidad del Atlántico",en:"Lecture, Universidad del Atlántico"}],
+ [2023,"La celebración en el borde existencial: literatura caribeña en <i>Los cuentos de Juana</i> (1972)",{es:"XXIII Congreso de la Asociación de Colombianistas, Université de Tours, Francia",en:"23rd Congress of the Association of Colombianists, Université de Tours, France"}],
+ [2023,"Las olas de las palabras: la metáfora fluvial en la creación literaria",{es:"VII Simposio Nacional en Estudios Literarios, Universidad del Tolima",en:"7th National Symposium on Literary Studies, Universidad del Tolima"}],
+ [2023,"The Coastal Baroque in Three Titles of <i>Los cuentos de Juana</i>","46th Society for Caribbean Studies Annual Conference, De Montfort University, Leicester, UK"],
+ [2023,"The Significance of the Magdalena River in Mid-19th Century Colombia",{es:"Society for Caribbean Studies, Postgraduate Conference (virtual)",en:"Society for Caribbean Studies, Postgraduate Conference (online)"}],
+ [2023,"Through the Meanders of the River: A Reading of Cultural Borders",{es:"13th AAAD Interdisciplinary Conference, James Madison University, Virginia (virtual)",en:"13th AAAD Interdisciplinary Conference, James Madison University, Virginia (online)"}],
+ [2022,"Narrativa cepediana",{es:"Conferencia magistral, 50 años de <i>Los cuentos de Juana</i>, Universidad del Atlántico",en:"Keynote, 50th anniversary of <i>Los cuentos de Juana</i>, Universidad del Atlántico"}]
+];
+const edu=[
+ ["2024–",{es:"Doctorado en Literatura",en:"PhD in Literature (in progress)"},"Universidad de los Andes, Bogotá"],
+ ["2025",{es:"Maestría en Estudios Literarios",en:"MA in Literary Studies"},{es:"Universidad Nacional de Colombia. Tesis: Aproximación crítica a la novela <i>La maldición</i> (1859): la construcción de las fronteras culturales en el Río Grande de la Magdalena",en:"Universidad Nacional de Colombia. Thesis on Manuel María Madiedo's <i>La maldición</i> (1859) and cultural borders along the Magdalena River"}],
+ ["2025",{es:"Microcredencial en Fundamentos en Humanidades Digitales",en:"Micro-credential in Digital Humanities"},"Universidad de los Andes"],
+ ["2025",{es:"Diplomado en Didáctica para la Enseñanza Universitaria",en:"Diploma in University Teaching"},"Politécnico Superior de Colombia"],
+ ["2020",{es:"Licenciatura en Español y Literatura",en:"B.Ed. in Spanish and Literature"},{es:"Universidad del Atlántico. Tesis meritoria",en:"Universidad del Atlántico. Thesis awarded distinction"}],
+ ["2016",{es:"Técnico en Audiovisuales",en:"Technical degree in Audiovisual Production"},"Escuela Distrital de Artes de Barranquilla"]
+];
+const exp=[
+ ["2024–",{es:"Profesor de Literatura Española, Literatura Latinoamericana de la Colonia y Taller de Inglés; coordinación del Semillero Maskeletras",en:"Lecturer in Spanish Literature, Colonial Latin American Literature and English; coordinator of the Maskeletras research seedbed"},"Universidad del Atlántico"],
+ ["2026",{es:"Evaluador de manuscrito",en:"Peer reviewer"},"Revista La Palabra (Tunja)"],
+ ["2023–24",{es:"Profesor bilingüe de proyectos (PBL), secundaria",en:"Bilingual project-based learning teacher, secondary school"},"Innova Schools, Bogotá"],
+ ["2021–22",{es:"Asistente docente de Estudios Literarios",en:"Teaching assistant, Literary Studies"},"Universidad Nacional de Colombia"],
+ ["2020–24",{es:"Investigador de estudios afroculturales",en:"Researcher in Afro-Colombian cultural studies"},"Fundación Sierra y Folclor, Bogotá"],
+ ["2020",{es:"Coordinador de museo",en:"Museum coordinator"},"Museo Etnográfico Miguel Ángel Builes, Medellín"],
+ ["2019",{es:"Taller literario Por las Rutas del Caribe Colombiano",en:"Creative writing workshop Por las Rutas del Caribe Colombiano"},"Fundación Pies Descalzos, Barranquilla"]
+];
+const awd=[
+ ["2024–25",{es:"Apoyo Impacto País para Doctorados",en:"Impacto País doctoral grant"},"Universidad de los Andes"],
+ ["2024",{es:"Egresado destacado",en:"Outstanding alumnus award"},"Universidad del Atlántico"],
+ ["2021–22",{es:"Becario, Facultad de Ciencias Humanas (tres semestres)",en:"Graduate fellow, Faculty of Human Sciences (three terms)"},"Universidad Nacional de Colombia"],
+ ["2020",{es:"Beca en Literatura Oral para Medios Digitales (con el grupo Sierra y Folclor)",en:"Oral Literature for Digital Media grant (with the Sierra y Folclor group)"},"IDARTES, Bogotá"],
+ ["2017",{es:"Ganador, concurso de fotografía, VI Cátedra Gabriel García Márquez, con «Prudencio en Macondo»",en:"Winner, photography contest, 6th Gabriel García Márquez Chair, with «Prudencio en Macondo»"},"Parque Cultural del Caribe"],
+ ["2006",{es:"Ganador, Concurso de Cuentos «La Jirafa»",en:"Winner, «La Jirafa» short story contest"},"La Cueva, Barranquilla"]
+];
+const photos=[
+ ["cueva","w",{es:"Con Edna Rueda Abrahams, La Cueva, Barranquilla, 2026",en:"With the writer Edna Rueda Abrahams, La Cueva, Barranquilla, 2026"}],
+ ["cueva-retrato","",{es:"La Cueva, Barranquilla, 2026",en:"La Cueva, Barranquilla, 2026"}],
+ ["tours","",{es:"XXIII Congreso de Colombianistas, Tours, 2023",en:"Association of Colombianists, Tours, 2023"}],
+ ["leicester-mapa","",{es:"Society for Caribbean Studies, Leicester, 2023",en:"Society for Caribbean Studies, Leicester, 2023"}],
+ ["egresados","",{es:"Encuentro de Egresados, Universidad del Atlántico, 2024",en:"Alumni Meeting, Universidad del Atlántico, 2024"}],
+ ["ua-juana","",{es:"«Reflexiones caribeñas en torno a los gestos de Juana», Universidad del Atlántico",en:"On Cepeda Samudio's Juana, Universidad del Atlántico"}],
+ ["uninorte","",{es:"Universidad del Norte, Barranquilla",en:"Universidad del Norte, Barranquilla"}],
+ ["leicester-juana","",{es:"Los cuentos de Juana en Leicester, 2023",en:"Los cuentos de Juana in Leicester, 2023"}],
+ ["sabanalarga","",{es:"Marvel Moreno, sede Sabanalarga, Universidad del Atlántico",en:"On Marvel Moreno, Universidad del Atlántico, Sabanalarga"}],
+ ["uniandes","",{es:"Grabación en la biblioteca, Universidad de los Andes",en:"Recording at the library, Universidad de los Andes"}],
+ ["catedra2017","",{es:"VI Cátedra Gabriel García Márquez, Museo del Caribe, 2017",en:"6th Gabriel García Márquez Chair, Museo del Caribe, 2017"}]
+];
+const L=x=>typeof x==="object"?`<span class="es">${x.es}</span><span class="en">${x.en}</span>`:x;
+document.getElementById("pubs").innerHTML=pubs.map(p=>`<div class="pub"><div class="yr">${p.y}</div><div><h3>${p.t}</h3><div class="meta">${L(p.m)}${p.u?` · <a href="${p.u}">${p.l}</a>`:""}</div></div></div>`).join("");
+let last=0;
+document.getElementById("talks").innerHTML=talks.map(t=>{const h=t[0]!==last?`<div class="yearhead">${t[0]}</div>`:"";last=t[0];return h+`<div class="talk${t[3]?" new":""}"><h3>${L(t[1])}</h3><div class="meta">${L(t[2])}${t[4]?` · <a href="${t[4]}">${t[4].includes("youtube")?"video":"<span class=es>programa</span><span class=en>programme</span>"}</a>`:""}</div></div>`}).join("");
+const rows=a=>a.map(r=>`<div class="row"><span class="d">${r[0]}</span><span>${L(r[1])}<small>${L(r[2])}</small></span></div>`).join("");
+document.getElementById("edu").innerHTML=rows(edu);
+document.getElementById("exp").innerHTML=rows(exp);
+document.getElementById("awd").innerHTML=rows(awd);
+document.getElementById("photos").innerHTML=photos.map(p=>`<figure class="${p[1]}"><img loading="lazy" src="img/${p[0]}.jpg" alt="${p[2].es}"><figcaption>${L(p[2])}</figcaption></figure>`).join("");
+const setLang=l=>{document.documentElement.dataset.lang=l;document.documentElement.lang=l;document.getElementById("l-es").setAttribute("aria-pressed",l==="es");document.getElementById("l-en").setAttribute("aria-pressed",l==="en");try{localStorage.setItem("lang",l)}catch(e){}};
+document.getElementById("l-es").addEventListener("click",()=>setLang("es"));
+document.getElementById("l-en").addEventListener("click",()=>setLang("en"));
+let saved=null;try{saved=localStorage.getItem("lang")}catch(e){}
+setLang(saved||((navigator.language||"es").startsWith("es")?"es":"en"));
+}
+</script>
+</body>
+</html>
