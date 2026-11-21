@@ -149,17 +149,31 @@ def pub(p):
     return (f'<div class="pub rv"><div class="yr">{p["y"]}</div><div><h3>{p["t"]}</h3>'
             f'<div class="meta">{kind}{L(p["m"])}{link}</div></div></div>')
 
+def talk_html(y, t, m, new, u):
+    link = ""
+    if u:
+        lab = "video" if "youtube" in u else L({"es": "programa", "en": "programme"})
+        link = f' · <a href="{u}">{lab}</a>'
+    return f'<div class="talk{" new" if new else ""} rv"><h3>{L(t)}</h3><div class="meta">{L(m)}{link}</div></div>'
+
+PLIEGUE = 2024  # años anteriores a este quedan plegados en el celular
+
 def talks():
-    out, last = [], None
-    for y, t, m, new, u in TALKS:
-        if y != last:
-            out.append(f'<div class="yearhead">{y}</div>'); last = y
-        link = ""
-        if u:
-            lab = "video" if "youtube" in u else L({"es": "programa", "en": "programme"})
-            link = f' · <a href="{u}">{lab}</a>'
-        out.append(f'<div class="talk{" new" if new else ""} rv"><h3>{L(t)}</h3><div class="meta">{L(m)}{link}</div></div>')
-    return "\n".join(out)
+    def block(items):
+        out, last = [], None
+        for it in items:
+            if it[0] != last:
+                out.append(f'<div class="yearhead">{it[0]}</div>'); last = it[0]
+            out.append(talk_html(*it))
+        return "\n".join(out)
+    recent = [t for t in TALKS if t[0] >= PLIEGUE]
+    older = [t for t in TALKS if t[0] < PLIEGUE]
+    if not older:
+        return block(recent)
+    ys = sorted({t[0] for t in older})
+    rng = f"{ys[0]}–{ys[-1]}" if len(ys) > 1 else str(ys[0])
+    summ = L({"es": f"Ver {rng} ({len(older)} más)", "en": f"Show {rng} ({len(older)} more)"})
+    return block(recent) + f'\n<details class="older" open><summary>{summ}</summary>\n' + block(older) + "\n</details>"
 
 def rows(a):
     return "\n".join(f'<div class="row"><span class="d">{d}</span><span>{L(t)}<small>{L(s)}</small></span></div>' for d, t, s in a)
@@ -190,6 +204,7 @@ out = (tpl.replace("{{ARTICULOS}}", "\n".join(pub(p) for p in ARTICULOS))
           .replace("{{SALAS_LIST}}", salas_list()).replace("{{SALAS_DETAIL}}", salas_detail())
           .replace("{{GALERIA}}", GALERIA)
           .replace("{{N_TALKS}}", str(len(TALKS))))
+out = out.replace('class="en"', 'class="en" lang="en"')
 assert "{{" not in out, "quedó un marcador sin reemplazar"
 pathlib.Path("index.html").write_text(out, encoding="utf-8")
 print("index.html generado:", len(out), "caracteres")

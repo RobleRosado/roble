@@ -5,6 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Álvaro García Benavides</title>
 <meta name="description" content="Álvaro Ramón García Benavides — literatura del Caribe colombiano y del siglo XIX. Doctorando en Literatura, Universidad de los Andes.">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Álvaro Ramón García Benavides">
+<meta property="og:description" content="Doctorando en Literatura, Universidad de los Andes. Literatura del Caribe colombiano y del siglo XIX, territorio y río Magdalena, humanidades digitales.">
+<meta property="og:url" content="https://roble.pages.dev/">
+<meta property="og:image" content="https://roble.pages.dev/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Álvaro García Benavides presentando en la Society for Caribbean Studies, Leicester, 2023">
+<meta property="og:locale" content="es_CO">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://roble.pages.dev/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
@@ -75,6 +87,11 @@ html[data-theme=dark] .tag{color:#9fd3dc}
 .talk::before{content:"";position:absolute;left:-27px;top:7px;width:13px;height:13px;border-radius:50%;background:var(--bg);border:3px solid var(--sea);z-index:1}
 .talk.new::before{background:var(--acc);border-color:var(--acc)}
 .talk h3{font-size:17px;font-family:"Source Sans 3",sans-serif;font-weight:600}
+.older{margin:0}
+.older>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:8px;min-height:44px;font-weight:600;color:var(--acc);margin:4px 0 10px}
+.older>summary::-webkit-details-marker{display:none}
+.older>summary::before{content:"+";display:inline-grid;place-items:center;width:22px;height:22px;border:2px solid var(--acc);border-radius:50%;font-size:15px;line-height:1}
+.older[open]>summary::before{content:"−"}
 .yearhead{font-family:Spectral,serif;font-size:24px;margin:12px 0 10px}
 .gal{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);background:#1b120b;color:#f4ece2;border-radius:8px;overflow:hidden;margin-bottom:22px}
 .gal .plan{position:relative;min-height:440px;background:radial-gradient(circle at 50% 50%,#3a2618 0,#1b120b 70%)}
@@ -312,6 +329,8 @@ document.getElementById('l-en').addEventListener('click',()=>setLang('en'));
 let saved=null;try{saved=localStorage.getItem('lang')}catch(e){}
 setLang(saved||((navigator.language||'es').toLowerCase().startsWith('es')?'es':'en'));
 
+/* ponencias antiguas: abiertas en pantallas anchas, plegadas en el celular */
+const older=document.querySelector('.older');if(older&&innerWidth<700)older.open=false;
 /* portada */
 const hero=document.querySelector('.hero');
 hero.querySelectorAll('h1 .w').forEach((w,i)=>w.style.transitionDelay=(i*0.12)+'s');
