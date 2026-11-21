@@ -119,7 +119,7 @@ AWD = [
 PHOTOS = [
  ("cueva", "w", {"es": "Con Edna Rueda Abrahams, La Cueva, Barranquilla, 2026", "en": "With the writer Edna Rueda Abrahams, La Cueva, Barranquilla, 2026"}),
  ("cueva-retrato", "", {"es": "La Cueva, Barranquilla, 2026", "en": "La Cueva, Barranquilla, 2026"}),
- ("tours", "", {"es": "XXIII Congreso de Colombianistas, Tours, 2023", "en": "Association of Colombianists, Tours, 2023"}),
+ ("tours", "w", {"es": "XXIII Congreso de Colombianistas, Tours, 2023", "en": "Association of Colombianists, Tours, 2023"}),
  ("leicester-mapa", "", {"es": "Society for Caribbean Studies, Leicester, 2023", "en": "Society for Caribbean Studies, Leicester, 2023"}),
  ("egresados", "", {"es": "Encuentro de Egresados, Universidad del Atlántico, 2024", "en": "Alumni Meeting, Universidad del Atlántico, 2024"}),
  ("ua-juana", "", {"es": "«Reflexiones caribeñas en torno a los gestos de Juana», Universidad del Atlántico", "en": "On Cepeda Samudio's Juana, Universidad del Atlántico"}),
@@ -128,9 +128,8 @@ PHOTOS = [
  ("sabanalarga", "", {"es": "Marvel Moreno, sede Sabanalarga, Universidad del Atlántico", "en": "On Marvel Moreno, Universidad del Atlántico, Sabanalarga"}),
  ("uniandes", "", {"es": "Grabación en la biblioteca, Universidad de los Andes", "en": "Recording at the library, Universidad de los Andes"}),
  ("tours-titulo", "", {"es": "«La celebración en el borde existencial», Congreso de Colombianistas, Tours, 2023", "en": "Paper at the Association of Colombianists, Tours, 2023"}),
- ("leicester-calle", "", {"es": "Leicester, Reino Unido, 2023", "en": "Leicester, United Kingdom, 2023"}),
  ("lente-caribe", "w", {"es": "Mención de honor, concurso de fotografía «Ruta de tradición por el Carnaval del Atlántico», Lente Caribe, 2017", "en": "Honourable mention, «Ruta de tradición por el Carnaval del Atlántico» photography contest, Lente Caribe, 2017"}),
- ("catedra-ggm", "", {"es": "Concurso de fotografía, VI Cátedra Gabriel García Márquez, 2017", "en": "Photography contest, 6th Gabriel García Márquez Chair, 2017"}),
+ ("catedra-ggm", "", {"es": "Con «Prudencio en Macondo», ganadora del concurso de fotografía de la VI Cátedra Gabriel García Márquez, 2017", "en": "With «Prudencio en Macondo», winner of the photography contest, 6th Gabriel García Márquez Chair, 2017"}),
  ("catedra2017", "w", {"es": "VI Cátedra Gabriel García Márquez, Museo del Caribe, 2017", "en": "6th Gabriel García Márquez Chair, Museo del Caribe, 2017"}),
 ]
 
