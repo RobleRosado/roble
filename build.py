@@ -56,7 +56,7 @@ TALKS = [
   {"es": "CRISOL III, Jornada de jóvenes investigadores en literatura, Universidad Nacional de Colombia", "en": "CRISOL III early-career researchers' day, Universidad Nacional de Colombia"}, 0,
   "https://www.humanas.unal.edu.co/2026/unidades-academicas/departamentos/literatura/eventos/crisol/crisol-iii"),
  (2025, "Proyectos de nación en el siglo XIX: Capmany y Manuel María Madiedo",
-  {"es": "Ciclo Historias Estelares, Universidad del Atlántico y UFMA, 30 de octubre. Organizador y conferencista", "en": "Historias Estelares series, Universidad del Atlántico and UFMA, 30 October. Organizer and speaker"}, 0,
+  {"es": "Sesión inaugural del ciclo Historias Estelares en la Literatura Hispánica, con Alexander Ortega Marín (UFMA). Universidad del Atlántico y UFMA, 30 de octubre. Organizador y conferencista", "en": "Opening session of the Historias Estelares series, with Alexander Ortega Marín (UFMA). Universidad del Atlántico and UFMA, 30 October. Organizer and speaker"}, 0,
   "https://www.youtube.com/watch?v=pJVAoUS6vMc"),
  (2025, "Crafting Caribbean Knowledge: A Reading of José Félix Fuenmayor's <i>Con el doctor afuera</i> (1967)",
   "Society for Caribbean Studies, Postgraduate Conference", 0, None),

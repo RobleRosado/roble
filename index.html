@@ -137,6 +137,7 @@ html[data-theme=dark] .tag{color:#9fd3dc}
 .photos{display:grid;grid-auto-flow:dense;grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:260px;gap:8px}
 .photos figure{margin:0;position:relative;overflow:hidden;border-radius:4px;background:var(--panel)}
 .photos figure.w{grid-column:span 2}
+.galfotos{grid-auto-rows:300px;margin-bottom:26px}
 .ph-open{all:unset;display:block;width:100%;height:100%;cursor:zoom-in}
 .ph-open:focus-visible{outline:3px solid var(--acc);outline-offset:-3px}
 .photos img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;transition:transform .6s ease}
@@ -247,7 +248,7 @@ footer p{margin:0 0 8px}
 <div class="yearhead">2025</div>
 <div class="talk rv"><h3>O Caribe literário colombiano: gênero e mestiçagem na obra de Marvel Moreno</h3><div class="meta">II Congresso Internacional de Linguagem, Literatura e Discurso (CILLID), UFMA, São Luís</div></div>
 <div class="talk rv"><h3>La cima que contiene las más contradictorias sustancias: la novela del Caribe decimonónico en <i>La maldición</i> (1859) de Manuel María Madiedo</h3><div class="meta"><span class="es">CRISOL III, Jornada de jóvenes investigadores en literatura, Universidad Nacional de Colombia</span><span class="en" lang="en">CRISOL III early-career researchers' day, Universidad Nacional de Colombia</span> · <a href="https://www.humanas.unal.edu.co/2026/unidades-academicas/departamentos/literatura/eventos/crisol/crisol-iii"><span class="es">programa</span><span class="en" lang="en">programme</span></a></div></div>
-<div class="talk rv"><h3>Proyectos de nación en el siglo XIX: Capmany y Manuel María Madiedo</h3><div class="meta"><span class="es">Ciclo Historias Estelares, Universidad del Atlántico y UFMA, 30 de octubre. Organizador y conferencista</span><span class="en" lang="en">Historias Estelares series, Universidad del Atlántico and UFMA, 30 October. Organizer and speaker</span> · <a href="https://www.youtube.com/watch?v=pJVAoUS6vMc">video</a></div></div>
+<div class="talk rv"><h3>Proyectos de nación en el siglo XIX: Capmany y Manuel María Madiedo</h3><div class="meta"><span class="es">Sesión inaugural del ciclo Historias Estelares en la Literatura Hispánica, con Alexander Ortega Marín (UFMA). Universidad del Atlántico y UFMA, 30 de octubre. Organizador y conferencista</span><span class="en" lang="en">Opening session of the Historias Estelares series, with Alexander Ortega Marín (UFMA). Universidad del Atlántico and UFMA, 30 October. Organizer and speaker</span> · <a href="https://www.youtube.com/watch?v=pJVAoUS6vMc">video</a></div></div>
 <div class="talk rv"><h3>Crafting Caribbean Knowledge: A Reading of José Félix Fuenmayor's <i>Con el doctor afuera</i> (1967)</h3><div class="meta">Society for Caribbean Studies, Postgraduate Conference</div></div>
 <div class="yearhead">2024</div>
 <div class="talk rv"><h3>Territorios caribes, una lectura de <i>Con el doctor afuera</i> (1967)</h3><div class="meta"><span class="es">VII Congreso Internacional Literaturas del Siglo XXI, Universidad del Norte, Barranquilla</span><span class="en" lang="en">7th International Congress on 21st-Century Literatures, Universidad del Norte, Barranquilla</span> · <a href="https://www.uninorte.edu.co/web/maestria-en-literatura-y-escrituras-creativas/congreso-literatura-2024"><span class="es">programa</span><span class="en" lang="en">programme</span></a></div></div>
@@ -301,6 +302,10 @@ footer p{margin:0 0 8px}
       </div>
     </div>
   </article>
+  <div class="photos galfotos">
+    <figure class="w rv"><button class="ph-open" aria-label="La galería proyectada en la III FILBAC"><img loading="lazy" src="img/filbac-3d.jpg" alt="El patio 3D de la Galería Álvaro Cepeda Samudio proyectado en el Teatro de Bellas Artes"></button><figcaption><span class="es">El recorrido 3D proyectado en el Teatro de Bellas Artes, III FILBAC, 12 de noviembre de 2026</span><span class="en" lang="en">The 3D walk-through on screen at the Bellas Artes Theatre, 3rd FILBAC, 12 November 2026</span></figcaption></figure>
+    <figure class="rv"><button class="ph-open" aria-label="Presentación en la III FILBAC"><img loading="lazy" src="img/filbac-podio.jpg" alt="Álvaro García Benavides en el atril de la III FILBAC, en homenaje a Álvaro Cepeda Samudio"></button><figcaption><span class="es">Presentación de la galería, III FILBAC en homenaje a Cepeda Samudio</span><span class="en" lang="en">Gallery launch, 3rd FILBAC in tribute to Cepeda Samudio</span></figcaption></figure>
+  </div>
   <div class="grid3">
     <div class="card rv"><h3>Caribanías: Biblioteca del pensamiento caribeño</h3><p class="es">Coinvestigador. Proyecto de investigación del grupo GILKARÍ, Universidad del Atlántico.</p><p class="en" lang="en">Co-investigator. Research project of the GILKARÍ group, Universidad del Atlántico.</p></div>
     <div class="card rv"><h3><span class="es">Semillero Maskeletras</span><span class="en" lang="en">Maskeletras research seedbed</span></h3><p class="es">Coordinación del semillero de investigación, Universidad del Atlántico (Barranquilla y Sabanalarga).</p><p class="en" lang="en">Coordinator of the undergraduate research seedbed, Universidad del Atlántico (Barranquilla and Sabanalarga).</p></div>
@@ -462,7 +467,7 @@ const show=i=>{cur=(i+figs.length)%figs.length;const f=figs[cur];const im=f.quer
   const cap=f.querySelector('figcaption').querySelector(root.dataset.lang==='en'?'.en':'.es');lbCap.textContent=(cap||f.querySelector('figcaption')).textContent;};
 const open=i=>{last=document.activeElement;show(i);lb.classList.add('open');lb.querySelector('.x').focus();document.body.style.overflow='hidden'};
 const close=()=>{lb.classList.remove('open');document.body.style.overflow='';if(last)last.focus()};
-document.querySelectorAll('.ph-open').forEach(b=>b.addEventListener('click',()=>open(+b.dataset.i)));
+document.querySelectorAll('.ph-open').forEach((b,i)=>b.addEventListener('click',()=>open(i)));
 lb.querySelector('.x').addEventListener('click',close);
 lb.querySelector('.pv').addEventListener('click',()=>show(cur-1));
 lb.querySelector('.nx').addEventListener('click',()=>show(cur+1));
