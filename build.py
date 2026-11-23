@@ -115,6 +115,17 @@ AWD = [
  ("2006", {"es": "Ganador, Concurso de Cuentos «La Jirafa»", "en": "Winner, «La Jirafa» short story contest"}, "La Cueva, Barranquilla"),
 ]
 
+ORG = [
+ ("2026", {"es": "Coorganizador del dossier «Ojo vulgar & Revista Iluminus (UFMA), Brasil 2026: reinventando o imaginário», con la plataforma cultural Ojo Vulgar",
+           "en": "Co-organizer of the dossier «Ojo vulgar & Revista Iluminus (UFMA), Brasil 2026: reinventando o imaginário», with the cultural platform Ojo Vulgar"},
+  '<i>Revista Iluminus</i> 3 (1), UFMA · <a href="https://periodicoseletronicos.ufma.br/index.php/iluminus/article/download/29799/14847/102286">editorial</a>'),
+ ("2026–", {"es": "Comité organizador del dossier sobre literatura del Caribe colombiano (en preparación)",
+            "en": "Organizing committee, dossier on Colombian Caribbean literature (in preparation)"}, "<i>Revista Iluminus</i>, UFMA"),
+ ("2025–", {"es": "Organizador del ciclo Historias Estelares en la Literatura Hispánica, integrado en 2026 a la Cátedra Maranhão: Diálogos Latinoamericanos",
+            "en": "Organizer of the Historias Estelares lecture series, merged in 2026 into the Cátedra Maranhão: Latin American Dialogues"},
+  "Universidad del Atlántico – Universidade Federal do Maranhão"),
+]
+
 # ---------------------------------------------------------------- fotos
 PHOTOS = [
  ("cueva", "w", {"es": "Con Edna Rueda Abrahams, La Cueva, Barranquilla, 2026", "en": "With the writer Edna Rueda Abrahams, La Cueva, Barranquilla, 2026"}),
@@ -202,7 +213,7 @@ tpl = pathlib.Path("plantilla.html").read_text(encoding="utf-8")
 out = (tpl.replace("{{ARTICULOS}}", "\n".join(pub(p) for p in ARTICULOS))
           .replace("{{CREACION}}", "\n".join(pub(p) for p in CREACION))
           .replace("{{TALKS}}", talks())
-          .replace("{{EDU}}", rows(EDU)).replace("{{EXP}}", rows(EXP)).replace("{{AWD}}", rows(AWD))
+          .replace("{{EDU}}", rows(EDU)).replace("{{EXP}}", rows(EXP)).replace("{{AWD}}", rows(AWD)).replace("{{ORG}}", rows(ORG))
           .replace("{{PHOTOS}}", photos())
           .replace("{{SALAS_LIST}}", salas_list()).replace("{{SALAS_DETAIL}}", salas_detail())
           .replace("{{GALERIA}}", GALERIA)
