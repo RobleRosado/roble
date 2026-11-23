@@ -26,6 +26,10 @@ ARTICULOS = [
          t="The Universal Symbolism of River Narratives in Modern Literature",
          m="<i>International Journal of Social Science and Humanity</i> 14 (1): 41–44. ISSN 2010-3646",
          u="https://doi.org/10.18178/ijssh.2024.14.1.1191", l="DOI 10.18178/ijssh.2024.14.1.1191"),
+    dict(y="", kind={"es": "Artículo en preparación", "en": "Article in preparation"},
+         t="Escribir con la cámara: reescritura audiovisual de «Barlovento» de Marvel Moreno en un semillero de formación docente",
+         m={"es": "Con Yakika Oneika Silgado Barreto. Artículo corto (resultados preliminares) para la revista <i>CEDOTIC</i>, Universidad del Atlántico",
+            "en": "With Yakika Oneika Silgado Barreto. Short article (preliminary results) for <i>CEDOTIC</i>, Universidad del Atlántico"}),
 ]
 TESIS = [
     dict(y=2025, kind={"es": "Tesis de maestría", "en": "MA thesis"},

@@ -129,6 +129,11 @@ html[data-theme=dark] .tag{color:#9fd3dc}
 .btn:hover{filter:brightness(1.08);transform:translateY(-1px)}
 .btn.o{background:#E07B1A}
 .gnote{font-size:14px;color:#6B3410}
+.proj{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);background:var(--panel);border:1px solid var(--rule);border-radius:8px;overflow:hidden;margin-bottom:22px}
+.proj .ph{position:relative;min-height:340px}
+.proj .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 22%}
+.proj .bd{padding:clamp(20px,3vw,36px);display:flex;flex-direction:column;gap:12px;justify-content:center}
+.proj h3{font-size:clamp(22px,2.4vw,28px);font-family:Spectral,serif}
 .grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
 .card{border-top:3px solid var(--sea);padding-top:12px}
 .card p{margin:6px 0 0;color:var(--soft);font-size:15px}
@@ -166,7 +171,7 @@ footer p{margin:0 0 8px}
 .js .hero.ready h1 .w{opacity:1;transform:none}
 .js .hero figure img{transform:scale(1.08);transition:transform 2.4s cubic-bezier(.2,.7,.2,1)}
 .js .hero.ready figure img{transform:scale(1)}
-@media(max-width:900px){.hero{grid-template-columns:minmax(0,1fr)}.hero figure{min-height:340px;order:-1}.two,.cv,.gal,footer .wrap{grid-template-columns:minmax(0,1fr)}.two>:first-child{position:static}.grid3{grid-template-columns:minmax(0,1fr)}.photos{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:200px}.gal .plan{min-height:360px}}
+@media(max-width:900px){.hero{grid-template-columns:minmax(0,1fr)}.hero figure{min-height:340px;order:-1}.two,.cv,.gal,.proj,footer .wrap{grid-template-columns:minmax(0,1fr)}.two>:first-child{position:static}.grid3{grid-template-columns:minmax(0,1fr)}.photos{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:200px}.gal .plan{min-height:360px}}
 @media(max-width:600px){nav .links{display:none}.hero h1{font-size:40px}.pub{grid-template-columns:minmax(0,1fr);gap:4px}.row{grid-template-columns:minmax(0,1fr);gap:2px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .rv,.js .hero h1 .w,.js .hero figure img{opacity:1;transform:none;transition:none}.ripple{animation:none;opacity:.4}.photos img{transition:none}}
 </style>
@@ -180,6 +185,7 @@ footer p{margin:0 0 8px}
     <a href="#publicaciones"><span class="es">Publicaciones</span><span class="en" lang="en">Publications</span></a>
     <a href="#ponencias"><span class="es">Ponencias</span><span class="en" lang="en">Talks</span></a>
     <a href="#proyectos"><span class="es">Proyectos</span><span class="en" lang="en">Projects</span></a>
+    <a href="#docencia"><span class="es">Docencia</span><span class="en" lang="en">Teaching</span></a>
     <a href="#cv">CV</a>
     <a href="#contacto"><span class="es">Contacto</span><span class="en" lang="en">Contact</span></a>
   </div>
@@ -230,6 +236,7 @@ footer p{margin:0 0 8px}
 <div class="pub rv"><div class="yr">2026</div><div><h3>O esvaziamento da raça e o Caribe epistêmico em <i>Úrsula</i> e <i>La maldición</i> (1859)</h3><div class="meta"><span class="tag"><span class="es">Artículo</span><span class="en" lang="en">Article</span></span> <i>Revista Iluminus</i> 3 (1): 1–8. ISSN 2966-1196 · <a href="https://doi.org/10.18764/2966-1196v3n1e29852">DOI 10.18764/2966-1196v3n1e29852</a></div></div></div>
 <div class="pub rv"><div class="yr">2025</div><div><h3>La celebración en el borde existencial: literatura caribeña en <i>Los cuentos de Juana</i> (1972) de Álvaro Cepeda Samudio</h3><div class="meta"><span class="tag"><span class="es">Ensayo</span><span class="en" lang="en">Essay</span></span> <span class="es"><i>Revista de Estudios Colombianos</i> 65 (enero–junio): 72–79. ISSN 2474-6819</span><span class="en" lang="en"><i>Revista de Estudios Colombianos</i> 65 (January–June): 72–79. ISSN 2474-6819</span> · <a href="https://colombianistas.org/ojs/index.php/rec/article/download/363/291/2006">PDF</a></div></div></div>
 <div class="pub rv"><div class="yr">2024</div><div><h3>The Universal Symbolism of River Narratives in Modern Literature</h3><div class="meta"><span class="tag"><span class="es">Artículo</span><span class="en" lang="en">Article</span></span> <i>International Journal of Social Science and Humanity</i> 14 (1): 41–44. ISSN 2010-3646 · <a href="https://doi.org/10.18178/ijssh.2024.14.1.1191">DOI 10.18178/ijssh.2024.14.1.1191</a></div></div></div>
+<div class="pub rv"><div class="yr"></div><div><h3>Escribir con la cámara: reescritura audiovisual de «Barlovento» de Marvel Moreno en un semillero de formación docente</h3><div class="meta"><span class="tag"><span class="es">Artículo en preparación</span><span class="en" lang="en">Article in preparation</span></span> <span class="es">Con Yakika Oneika Silgado Barreto. Artículo corto (resultados preliminares) para la revista <i>CEDOTIC</i>, Universidad del Atlántico</span><span class="en" lang="en">With Yakika Oneika Silgado Barreto. Short article (preliminary results) for <i>CEDOTIC</i>, Universidad del Atlántico</span></div></div></div>
     <h3 class="sub"><span class="es">Tesis</span><span class="en" lang="en">Thesis</span></h3>
 <div class="pub rv"><div class="yr">2025</div><div><h3>Aproximación crítica a la novela <i>La maldición</i> (1859) de Manuel María Madiedo: la construcción de las fronteras culturales del Río Grande de la Magdalena</h3><div class="meta"><span class="tag"><span class="es">Tesis de maestría</span><span class="en" lang="en">MA thesis</span></span> <span class="es">Universidad Nacional de Colombia, Maestría en Estudios Literarios. Directora: Carmen Elisa Acosta Peñaloza</span><span class="en" lang="en">Universidad Nacional de Colombia, MA in Literary Studies. Supervisor: Carmen Elisa Acosta Peñaloza</span> · <a href="https://repositorio.unal.edu.co/items/908231f8-3feb-4d94-8599-e0d5e3bde3ff"><span class="es">Repositorio UNAL</span><span class="en" lang="en">UNAL repository</span></a></div></div></div>
     <h3 class="sub"><span class="es">Creación literaria</span><span class="en" lang="en">Fiction</span></h3>
@@ -315,6 +322,26 @@ footer p{margin:0 0 8px}
     <div class="card rv"><h3>Caribanías: Biblioteca del pensamiento caribeño</h3><p class="es">Coinvestigador del proyecto del grupo GILKARÍ (Universidad del Atlántico). Participación en la política editorial de la Biblioteca y de la colección Manglares, en la conformación de sus comités editorial y científico y en la gestión editorial de manuscritos.</p><p class="en" lang="en">Co-investigator in the GILKARÍ group project (Universidad del Atlántico). Contributed to the editorial policy of the Library and its Manglares collection, the formation of its editorial and scientific boards, and manuscript management.</p></div>
     <div class="card rv"><h3><span class="es">Semillero Maskeletras</span><span class="en" lang="en">Maskeletras research seedbed</span></h3><p class="es">Coordinación del semillero de investigación, Universidad del Atlántico (Barranquilla y Sabanalarga).</p><p class="en" lang="en">Coordinator of the undergraduate research seedbed, Universidad del Atlántico (Barranquilla and Sabanalarga).</p></div>
     <div class="card rv"><h3>Historias Estelares / Cátedra Maranhão</h3><p class="es">Ciclo de conferencias entre la Universidad del Atlántico y la Universidade Federal do Maranhão. Organizador y conferencista.</p><p class="en" lang="en">Lecture series between Universidad del Atlántico and Universidade Federal do Maranhão (Brazil). Organizer and speaker.</p></div>
+  </div>
+</div></section>
+
+<section class="band" id="docencia"><div class="wrap">
+  <h2><span class="es">Docencia y mediación</span><span class="en" lang="en">Teaching and mediation</span></h2>
+  <article class="proj rv">
+    <div class="ph"><img loading="lazy" src="img/sabanalarga.jpg" alt="Álvaro García Benavides en una sesión sobre Marvel Moreno, sede Sabanalarga, Universidad del Atlántico"></div>
+    <div class="bd">
+      <p class="sn" style="margin:0;font-weight:600;color:var(--acc)"><span class="es">Semillero Maskeletras · 2025-1</span><span class="en" lang="en">Maskeletras research seedbed · 2025</span></p>
+      <h3><span class="es">«Barlovento»: escribir con la cámara</span><span class="en" lang="en">“Barlovento”: writing with the camera</span></h3>
+      <p class="es" style="margin:0">En el primer semestre de 2025, el semillero de investigación Maskeletras, de la Licenciatura en Humanidades y Lengua Castellana de la Universidad del Atlántico, reescribió en video el cuento «Barlovento» de Marvel Moreno y presentó un tríptico audiovisual en la Semana de las Lenguas del programa.</p>
+      <p class="en" lang="en" style="margin:0">In the first half of 2025, the Maskeletras research group, part of the Bachelor’s program in Humanities and Spanish Language at Universidad del Atlántico, rewrote Marvel Moreno’s short story “Barlovento” on video and presented an audiovisual triptych at the program’s Language Week.</p>
+      <p class="meta" style="margin:0"><span class="es">Las piezas:</span><span class="en" lang="en">The pieces:</span> <a href="https://youtu.be/VwInPqE3VhU">Yakika Diario</a> · <a href="https://youtu.be/eGnFjjwHbVI">Monólogo Michael</a> · <a href="https://youtu.be/6wyONHu7Vlc">El mar se la tragó</a></p>
+      <p class="meta" style="margin:0"><span class="es">Tutor del semillero. La experiencia es el trabajo de grado de una integrante y se sistematiza en un artículo con Yakika Oneika Silgado Barreto (en preparación).</span><span class="en" lang="en">Seedbed supervisor. The project is an undergraduate thesis by one of the members and is the subject of a co-authored article with Yakika Oneika Silgado Barreto (in preparation).</span></p>
+    </div>
+  </article>
+  <div class="grid3">
+    <div class="card rv"><h3><span class="es">Cursos, Universidad del Atlántico</span><span class="en" lang="en">Courses, Universidad del Atlántico</span></h3><p class="es">Literatura Latinoamericana de la Colonia · Literatura Española · Taller de Inglés. Docente de cátedra, sedes Barranquilla y Sabanalarga.</p><p class="en" lang="en">Colonial Latin American Literature · Spanish Literature · English Workshop. Adjunct lecturer, Barranquilla and Sabanalarga campuses.</p></div>
+    <div class="card rv"><h3><span class="es">Talleres de creación de la Galería</span><span class="en" lang="en">Creative workshops for the Gallery</span></h3><p class="es">Talleres con estudiantes de la Licenciatura y el Semillero Maskeletras que dieron origen a las obras de la <a href="#galeria">Galería Álvaro Cepeda Samudio</a> (2026).</p><p class="en" lang="en">Workshops with teacher-education students and the Maskeletras seedbed that produced the works in the <a href="#galeria">Álvaro Cepeda Samudio Gallery</a> (2026).</p></div>
+    <div class="card rv"><h3><span class="es">Otra experiencia docente</span><span class="en" lang="en">Other teaching</span></h3><p class="es">Asistente docente de Estudios Literarios, Universidad Nacional de Colombia (2021–22). Profesor bilingüe de proyectos en secundaria, Innova Schools, Bogotá (2023–24).</p><p class="en" lang="en">Teaching assistant in Literary Studies, Universidad Nacional de Colombia (2021–22). Bilingual project-based learning teacher, Innova Schools, Bogotá (2023–24).</p></div>
   </div>
 </div></section>
 
