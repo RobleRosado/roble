@@ -106,6 +106,7 @@ EDU = [
 EXP = [
  ("2024–", {"es": "Profesor de Literatura Española, Literatura Latinoamericana de la Colonia y Taller de Inglés; coordinación del Semillero Maskeletras",
             "en": "Lecturer in Spanish Literature, Colonial Latin American Literature and English; coordinator of the Maskeletras research seedbed"}, "Universidad del Atlántico"),
+ ("2025–", {"es": "Investigador integrante, Grupo de Investigación Literaria del Caribe GILKARÍ (COL0009199, categoría B MinCiencias)", "en": "Research group member, GILKARÍ Caribbean Literary Research Group (COL0009199, category B, MinCiencias)"}, "Universidad del Atlántico"),
  ("2026", {"es": "Evaluador de manuscrito", "en": "Peer reviewer"}, "Revista La Palabra (Tunja)"),
  ("2023–24", {"es": "Profesor bilingüe de proyectos (PBL), secundaria", "en": "Bilingual project-based learning teacher, secondary school"}, "Innova Schools, Bogotá"),
  ("2021–22", {"es": "Asistente docente de Estudios Literarios", "en": "Teaching assistant, Literary Studies"}, "Universidad Nacional de Colombia"),
@@ -128,6 +129,9 @@ ORG = [
   '<i>Revista Iluminus</i> 3 (1), UFMA · <a href="https://periodicoseletronicos.ufma.br/index.php/iluminus/article/download/29799/14847/102286">editorial</a>'),
  ("2026–", {"es": "Comité organizador del dossier sobre literatura del Caribe colombiano (en preparación)",
             "en": "Organizing committee, dossier on Colombian Caribbean literature (in preparation)"}, "<i>Revista Iluminus</i>, UFMA"),
+ ("2025–", {"es": "Coinvestigador y gestión editorial de la colección Manglares, proyecto Caribanías: Biblioteca del pensamiento caribeño (política editorial, conformación de los comités editorial y científico, gestión editorial de manuscritos)",
+            "en": "Co-investigator and editorial management of the Manglares collection, Caribanías: Library of Caribbean Thought project (editorial policy, formation of the editorial and scientific boards, manuscript management)"},
+  "Universidad del Atlántico, VIEPS (CH1139-PS2025)"),
  ("2025–", {"es": "Organizador del ciclo Historias Estelares en la Literatura Hispánica, integrado en 2026 a la Cátedra Maranhão: Diálogos Latinoamericanos",
             "en": "Organizer of the Historias Estelares lecture series, merged in 2026 into the Cátedra Maranhão: Latin American Dialogues"},
   "Universidad del Atlántico – Universidade Federal do Maranhão"),
