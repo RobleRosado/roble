@@ -27,6 +27,13 @@ ARTICULOS = [
          m="<i>International Journal of Social Science and Humanity</i> 14 (1): 41–44. ISSN 2010-3646",
          u="https://doi.org/10.18178/ijssh.2024.14.1.1191", l="DOI 10.18178/ijssh.2024.14.1.1191"),
 ]
+TESIS = [
+    dict(y=2025, kind={"es": "Tesis de maestría", "en": "MA thesis"},
+         t="Aproximación crítica a la novela <i>La maldición</i> (1859) de Manuel María Madiedo: la construcción de las fronteras culturales del Río Grande de la Magdalena",
+         m={"es": "Universidad Nacional de Colombia, Maestría en Estudios Literarios. Directora: Carmen Elisa Acosta Peñaloza",
+            "en": "Universidad Nacional de Colombia, MA in Literary Studies. Supervisor: Carmen Elisa Acosta Peñaloza"},
+         u="https://repositorio.unal.edu.co/items/908231f8-3feb-4d94-8599-e0d5e3bde3ff", l={"es": "Repositorio UNAL", "en": "UNAL repository"}),
+]
 CREACION = [
     dict(y=2022, t="Civilización y otros cuentos",
          m={"es": "Cuentos. <i>Lua revista</i> 7–8. ISSN 2665-3974", "en": "Short fiction. <i>Lua revista</i> 7–8. ISSN 2665-3974"},
@@ -86,8 +93,8 @@ TALKS = [
 EDU = [
  ("2024–", {"es": "Doctorado en Literatura", "en": "PhD in Literature (in progress)"}, "Universidad de los Andes, Bogotá"),
  ("2025", {"es": "Maestría en Estudios Literarios", "en": "MA in Literary Studies"},
-  {"es": "Universidad Nacional de Colombia. Tesis: Aproximación crítica a la novela <i>La maldición</i> (1859): la construcción de las fronteras culturales en el Río Grande de la Magdalena",
-   "en": "Universidad Nacional de Colombia. Thesis on Manuel María Madiedo's <i>La maldición</i> (1859) and cultural borders along the Magdalena River"}),
+  {"es": 'Universidad Nacional de Colombia. Tesis: <a href="https://repositorio.unal.edu.co/items/908231f8-3feb-4d94-8599-e0d5e3bde3ff">Aproximación crítica a la novela <i>La maldición</i> (1859) de Manuel María Madiedo: la construcción de las fronteras culturales del Río Grande de la Magdalena</a>. Directora: Carmen Elisa Acosta Peñaloza',
+   "en": 'Universidad Nacional de Colombia. Thesis: <a href="https://repositorio.unal.edu.co/items/908231f8-3feb-4d94-8599-e0d5e3bde3ff">Aproximación crítica a la novela <i>La maldición</i> (1859) de Manuel María Madiedo: la construcción de las fronteras culturales del Río Grande de la Magdalena</a> (in Spanish). Supervisor: Carmen Elisa Acosta Peñaloza'}),
  ("2025", {"es": "Microcredencial en Fundamentos en Humanidades Digitales", "en": "Micro-credential in Digital Humanities"}, "Universidad de los Andes"),
  ("2025", {"es": "Diplomado en Didáctica para la Enseñanza Universitaria", "en": "Diploma in University Teaching"}, "Politécnico Superior de Colombia"),
  ("2020", {"es": "Licenciatura en Español y Literatura", "en": "B.Ed. in Spanish and Literature"},
@@ -218,7 +225,26 @@ out = (tpl.replace("{{ARTICULOS}}", "\n".join(pub(p) for p in ARTICULOS))
           .replace("{{SALAS_LIST}}", salas_list()).replace("{{SALAS_DETAIL}}", salas_detail())
           .replace("{{GALERIA}}", GALERIA)
           .replace("{{N_TALKS}}", str(len(TALKS))))
+out = out.replace("{{TESIS}}", "\n".join(pub(p) for p in TESIS))
 out = out.replace('class="en"', 'class="en" lang="en"')
-assert "{{" not in out, "quedó un marcador sin reemplazar"
-pathlib.Path("index.html").write_text(out, encoding="utf-8")
-print("index.html generado:", len(out), "caracteres")
+
+SITE = "https://roble.pages.dev"
+META = {
+ "es": dict(lang="es", url=SITE + "/", locale="es_CO", alt="en_US",
+            desc="Doctorando en Literatura, Universidad de los Andes. Literatura del Caribe colombiano y del siglo XIX, territorio y río Magdalena, humanidades digitales."),
+ "en": dict(lang="en", url=SITE + "/en/", locale="en_US", alt="es_CO",
+            desc="PhD student in Literature, Universidad de los Andes. Nineteenth-century Colombian Caribbean literature, territory and the Magdalena River, digital humanities."),
+}
+def page(lang):
+    m = META[lang]
+    h = out
+    h = h.replace('<html lang="es" data-lang="es">', f'<html lang="{m["lang"]}" data-lang="{m["lang"]}" data-page="{m["lang"]}">')
+    h = h.replace("{{DESC}}", m["desc"]).replace("{{URL}}", m["url"]).replace("{{LOCALE}}", m["locale"]).replace("{{LOCALE_ALT}}", m["alt"])
+    if lang == "en":
+        h = h.replace('src="img/', 'src="../img/')
+    assert "{{" not in h, "quedó un marcador sin reemplazar"
+    return h
+pathlib.Path("index.html").write_text(page("es"), encoding="utf-8")
+pathlib.Path("en").mkdir(exist_ok=True)
+pathlib.Path("en/index.html").write_text(page("en"), encoding="utf-8")
+print("index.html y en/index.html generados:", len(out), "caracteres")

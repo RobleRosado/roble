@@ -4,19 +4,22 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Álvaro García Benavides</title>
-<meta name="description" content="Álvaro Ramón García Benavides — literatura del Caribe colombiano y del siglo XIX. Doctorando en Literatura, Universidad de los Andes.">
+<meta name="description" content="{{DESC}}">
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Álvaro Ramón García Benavides">
-<meta property="og:description" content="Doctorando en Literatura, Universidad de los Andes. Literatura del Caribe colombiano y del siglo XIX, territorio y río Magdalena, humanidades digitales.">
-<meta property="og:url" content="https://roble.pages.dev/">
+<meta property="og:description" content="{{DESC}}">
+<meta property="og:url" content="{{URL}}">
 <meta property="og:image" content="https://roble.pages.dev/img/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Álvaro García Benavides presentando en la Society for Caribbean Studies, Leicester, 2023">
-<meta property="og:locale" content="es_CO">
-<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale" content="{{LOCALE}}">
+<meta property="og:locale:alternate" content="{{LOCALE_ALT}}">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="canonical" href="https://roble.pages.dev/">
+<link rel="canonical" href="{{URL}}">
+<link rel="alternate" hreflang="es" href="https://roble.pages.dev/">
+<link rel="alternate" hreflang="en" href="https://roble.pages.dev/en/">
+<link rel="alternate" hreflang="x-default" href="https://roble.pages.dev/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
@@ -188,8 +191,8 @@ footer p{margin:0 0 8px}
 <header class="hero" id="inicio">
   <div class="txt">
     <h1><span class="w">Álvaro</span> <span class="w">Ramón</span> <span class="w">García</span> <span class="w">Benavides</span></h1>
-    <p class="es">Doctorando en Literatura, Universidad de los Andes. Investigador del grupo GILKARÍ, Universidad del Atlántico (Barranquilla).</p>
-    <p class="en">PhD candidate in Literature, Universidad de los Andes (Bogotá). Researcher, GILKARÍ research group, Universidad del Atlántico (Barranquilla, Colombia).</p>
+    <p class="es">Doctorando en Literatura, Universidad de los Andes. Docente de cátedra e investigador del grupo GILKARÍ, Universidad del Atlántico (Barranquilla).</p>
+    <p class="en">PhD student in Literature, Universidad de los Andes (Bogotá). Adjunct lecturer and researcher (GILKARÍ research group), Universidad del Atlántico (Barranquilla, Colombia).</p>
     <div class="ids">
       <a href="https://orcid.org/0000-0002-0886-4992">ORCID</a>
       <a href="https://scholar.google.com/citations?user=RLEHADkAAAAJ">Google Scholar</a>
@@ -225,6 +228,8 @@ footer p{margin:0 0 8px}
   <div>
     <h3 class="sub"><span class="es">Artículos y ensayos</span><span class="en">Articles and essays</span></h3>
 {{ARTICULOS}}
+    <h3 class="sub"><span class="es">Tesis</span><span class="en">Thesis</span></h3>
+{{TESIS}}
     <h3 class="sub"><span class="es">Creación literaria</span><span class="en">Fiction</span></h3>
 {{CREACION}}
   </div>
@@ -334,7 +339,9 @@ const setLang=l=>{root.dataset.lang=l;root.lang=l;document.getElementById('l-es'
 document.getElementById('l-es').addEventListener('click',()=>setLang('es'));
 document.getElementById('l-en').addEventListener('click',()=>setLang('en'));
 let saved=null;try{saved=localStorage.getItem('lang')}catch(e){}
-setLang(saved||((navigator.language||'es').toLowerCase().startsWith('es')?'es':'en'));
+const q=new URLSearchParams(location.search).get('lang');
+const pg=root.dataset.page;
+setLang(pg==='en'?'en':(q==='en'||q==='es')?q:(location.hash==='#en'?'en':saved||((navigator.language||'es').toLowerCase().startsWith('es')?'es':'en')));
 
 /* ponencias antiguas: abiertas en pantallas anchas, plegadas en el celular */
 const older=document.querySelector('.older');if(older&&innerWidth<700)older.open=false;
