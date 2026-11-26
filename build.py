@@ -108,7 +108,7 @@ EDU = [
  ("2016", {"es": "Técnico en Audiovisuales", "en": "Technical degree in Audiovisual Production"}, "Escuela Distrital de Artes de Barranquilla"),
 ]
 EXP = [
- ("2024–", {"es": "Profesor de Literatura Española, Literatura Latinoamericana de la Colonia y Taller de Inglés; coordinación del Semillero Maskeletras",
+ ("2025–", {"es": "Profesor de Literatura Española, Literatura Latinoamericana de la Colonia y Taller de Inglés; coordinación del Semillero Maskeletras",
             "en": "Lecturer in Spanish Literature, Colonial Latin American Literature and English; coordinator of the Maskeletras research seedbed"}, "Universidad del Atlántico"),
  ("2025–", {"es": "Investigador integrante, Grupo de Investigación Literaria del Caribe GILKARÍ (COL0009199, categoría B MinCiencias)", "en": "Research group member, GILKARÍ Caribbean Literary Research Group (COL0009199, category B, MinCiencias)"}, "Universidad del Atlántico"),
  ("2026", {"es": "Evaluador de manuscrito", "en": "Peer reviewer"}, "Revista La Palabra (Tunja)"),
